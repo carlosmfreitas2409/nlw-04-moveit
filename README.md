@@ -78,11 +78,11 @@ Nos links abaixo você encontra o layout do projeto Web. Lembrando que você pre
 
 - [x] ~~Autenticação com Github e Google~~
 - [x] ~~Melhoria no layout~~
-- [] Dark Mode
-- [] Twitter share
-- [] Responsividade
-- [] Leaderboard
-- [] Animações (Framer Motion)
+- [ ] Dark Mode
+- [ ] Twitter share
+- [ ] Responsividade
+- [ ] Leaderboard
+- [ ] Animações (Framer Motion)
 
 ## :information_source: Instalação e uso
 
