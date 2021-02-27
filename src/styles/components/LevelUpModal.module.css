@@ -1,0 +1,78 @@
+.overlay {
+  background: rgba(242, 243, 245, 0.8);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: var(--white);
+  width: 100%;
+  max-width: 400px;
+  /* padding: 2rem 3rem; */
+  border-radius: 5px;
+  box-shadow: 0 0  60px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+}
+
+.container header {
+  margin: 2rem 3rem 0;
+  font-size: 8.75rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: url('/icons/levelup.svg') no-repeat center;
+  background-size: 12.5rem;
+  text-shadow: 0px 10px 16px rgba(89, 101, 224, 0.3);
+}
+
+.container strong {
+  font-size: 2.25rem;
+  color: var(--title);
+}
+
+.container p {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-top: 0.25rem;
+}
+
+.container .twitterButton {
+  width: 100%;
+  padding: 28px;
+  margin-top: 40px;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+
+  background: #F5FCFF;
+  color: var(--blue-twitter);
+  box-shadow: 0 0 3.75rem rgba(0, 0, 0, 0.05);
+  
+  border-radius: 0 0 5px 5px;
+  border: 0;
+  border-top: 1px solid #DCDDE0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .twitterButton svg {
+  margin-left: 1rem;
+}
+
+.container .closeModalButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background: transparent;
+  border: 0;
+  font-size: 0;
+}

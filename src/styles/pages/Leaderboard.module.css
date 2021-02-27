@@ -1,0 +1,28 @@
+.leaderboardContainer {
+  height: 100vh;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboardContainer h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--title);
+}
+
+.leaderboardContainer .comming {
+  background: var(--red);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1.2rem;
+
+  padding: 1rem;
+  margin-top: 2.75rem;
+  border-radius: 6px;
+
+  box-shadow: 0 0 8.75rem rgba(0, 0, 0, 0.05);
+}

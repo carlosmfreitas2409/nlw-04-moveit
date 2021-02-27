@@ -1,0 +1,59 @@
+.sidebarContainer {
+  position: fixed;
+  height: 100%;
+  padding: 2rem;
+  background: linear-gradient(180deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebarContainer button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 0;
+}
+
+.sidebarContainer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.sidebarContainer ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.sidebarContainer ul li:hover svg {
+  filter: brightness(0.9);
+}
+
+.sidebarContainer ul li + li {
+  margin-top: 2.5rem;
+}
+
+.menuActive::before {
+  content: '';
+  position: absolute;
+
+  left: 0;
+
+  width: 4px;
+  height: 56px;
+
+  background: var(--blue);
+  border-radius: 0 5px 5px 0;
+}
+
+.menuActive svg {
+  color: var(--blue) !important;
+}

@@ -1,34 +1,123 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <img src=".github/banner.png" title="Move.it" alt="Move.it">
+</h1>
 
-## Getting Started
+<p align="center">Exercite-se, ganhe experiência e suba de nível 🚀</p>
 
-First, run the development server:
+<h4 align="center">
+  Versão 2.0
+</h4>
+
+<p align="center">
+  <a href="#-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-to-do">To-Do</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-information_source-instalação-e-uso">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
+</p>
+
+<p align="center">
+  <img 
+    alt="Made By"
+    src="https://img.shields.io/badge/Made%20by-Carlos%20Eduardo-%235965e0" 
+  >
+  <img 
+    alt="Github Top Language"
+    src="https://img.shields.io/github/languages/top/carlosmfreitas2409/nlw-04-moveit?color=%235965e0"
+  >
+  <img 
+    alt="Github Language Count"
+    src="https://img.shields.io/github/languages/count/carlosmfreitas2409/nlw-04-moveit?color=%235965e0"
+  >
+  <a href="https://github.com/carlosmfreitas2409/nlw-04-moveit/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/carlosmfreitas2409/nlw-04-moveit?color=%235965e0">
+  </a>
+  <img 
+    alt="Project License"
+    src="https://img.shields.io/github/license/carlosmfreitas2409/nlw-04-moveit?color=%235965e0"
+  >
+</p>
+
+<p aling="center">
+  <img src=".github/moveit.png" alt="Move.it" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://moveit-six-phi.vercel.app/" target="_blank">
+    <img alt="Demo on Vercel" src=".github/demo_on_vercel.png">
+  </a>
+</p>
+
+----
+
+## 💡 Sobre
+
+O Move.it é uma aplicação baseado na [Técnica de Pomodoro®](https://francescocirillo.com/pages/pomodoro-technique). Um jogo de ciclos de exercícios, para aqueles que passam muito tempo no computador, assim como eu. 😉 
+
+Este projeto foi desenvolvido durante a 4º edição da Next Level Week (NLW), um evento realizado pela [Rocketseat](https://rocketseat.com.br). 
+
+## 🛠️ Tecnologias
+
+Esse projeto foi desenvolvido usando as seguintes tecnologias:
+
+- [Next.js](https://nextjs.org/)
+- [ReactJS](https://pt-br.reactjs.org)
+- [Typescript](https://typescriptlang.org/)
+- [NextAuth.js](https://next-auth.js.org/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+## 🎨 Layout
+
+Nos links abaixo você encontra o layout do projeto Web. Lembrando que você precisa ter uma conta no [Figma](https://figma.com) para acessá-lo.
+
+- [Layout Web](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0)
+- [Layout Web 2.0](https://www.figma.com/file/vRbW1u0CEZuG2zE6bU5qLg/Move.it-2.0)
+
+## 📝 To-Do
+
+- [x] ~~Autenticação com Github e Google~~
+- [x] ~~Melhoria no layout~~
+- [] Dark Mode
+- [] Twitter share
+- [] Responsividade
+- [] Leaderboard
+- [] Animações (Framer Motion)
+
+## :information_source: Instalação e uso
+
+Para clonar e executar esta aplicação, você precisará do [Git](https://git-scm.com/) e [Yarn](https://yarnpkg.com/). A partir de sua linha de comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone este repositório
+$ git clone https://github.com/martins-rafael/moveIt.git
+
+# Entre no repositório
+$ cd moveIt
+
+# Instale as dependências
+$ yarn
+
+# Rode a aplicação
+$ yarn dev
+
+# Navegue para http://localhost:3000
+# A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos. 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Como contribuir
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Faça um fork desse repositório;
+- Crie uma branch com a sua feature: `git checkout -b minha-feature`;
+- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
+- Faça push para a sua branch: `git push origin minha-feature`;
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Após o merge da sua pull request for realizado, você pode deletar a sua branch.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📝 Licença
 
-## Learn More
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/carlosmfreitas2409/nlw-04-moveit/blob/master/LICENSE) para mais detalhes.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p>Feito com 💜 por Carlos Eduardo.</p>
