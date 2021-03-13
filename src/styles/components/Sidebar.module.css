@@ -30,11 +30,19 @@
   justify-content: center;
 
   cursor: pointer;
-  transition: filter 0.2s;
+  transition: filter 0.2s, transform 0.2s;
 }
 
 .sidebarContainer ul li:hover svg {
   filter: brightness(0.9);
+}
+
+.sidebarContainer ul li svg {
+  transition: transform 0.2s;
+}
+
+.sidebarContainer ul li:not(.menuActive):hover svg {
+  transform: scale(1.2);
 }
 
 .sidebarContainer ul li + li {

@@ -9,14 +9,16 @@ export default function Leaderboard() {
     <>
       <Sidebar />
 
-      <div className={styles.leaderboardContainer}>
-        <Head>
-          <title>Leaderboard | move.it</title>
-        </Head>
+      <div style={{ marginLeft: '7rem' }}>
+        <div className={styles.leaderboardContainer}>
+          <Head>
+            <title>Leaderboard | move.it</title>
+          </Head>
 
-        <h2>Leaderboard</h2>
+          <h2>Leaderboard</h2>
 
-        <div className={styles.comming}>Em-breve</div>
+          <div className={styles.comming}>Em-breve</div>
+        </div>
       </div>
     </>
   );

@@ -30,16 +30,17 @@
 
 .challengeNotActive p {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   
   line-height: 1.4;
-  max-width: 70%;
+  max-width: 90%;
   margin-top: 3rem;
 }
 
 .challengeNotActive p img {
-  margin-bottom: 1rem;
+  height: 50px;
+  margin-right: 1.2rem;
 }
 
 .challengeActive {

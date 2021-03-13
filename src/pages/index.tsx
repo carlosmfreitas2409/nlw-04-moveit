@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import { signIn, useSession } from 'next-auth/client';
+import { getSession, signIn, useSession, Session } from 'next-auth/client';
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -9,8 +10,11 @@ import { FiLogIn } from 'react-icons/fi';
 
 import styles from '../styles/pages/Home.module.css';
 
-export default function Home() {
-  const [session] = useSession();
+interface HomeProps {
+  session: Session;
+}
+
+export default function Home({ session }: HomeProps) {
   const router = useRouter();
 
   useEffect(() => {
@@ -49,4 +53,14 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const session = await getSession(ctx);
+
+  return {
+    props: {
+      session
+    }
+  };
 }

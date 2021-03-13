@@ -76,8 +76,11 @@ Nos links abaixo você encontra o layout do projeto Web. Lembrando que você pre
 
 ## 📝 To-Do
 
-- [x] ~~Autenticação com Github e Google~~
 - [x] ~~Melhoria no layout~~
+- [x] ~~Autenticação com Github e Google~~
+- [x] ~~Salvar no banco de dados (Remover cookies)~~
+- [x] ~~Animação na ExperienceBar~~
+- [x] ~~Animação no botão, quando estiver ativo~~
 - [ ] Dark Mode
 - [ ] Twitter share
 - [ ] Responsividade

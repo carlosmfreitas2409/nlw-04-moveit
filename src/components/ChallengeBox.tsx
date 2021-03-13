@@ -6,7 +6,7 @@ import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
   const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
-  const { resetCountdown } = useContext(CountdownContext);
+  const { isActive, resetCountdown } = useContext(CountdownContext);
 
   function handleChallengeSucceeded() {
     completeChallenge();
@@ -20,7 +20,7 @@ export function ChallengeBox() {
   
   return (
     <div className={styles.challengeBoxContainer}>
-      {activeChallenge ? (
+      {activeChallenge && (
         <div className={styles.challengeActive}>
           <header>Ganhe {activeChallenge.amount} xp</header>
 
@@ -48,12 +48,24 @@ export function ChallengeBox() {
             </button>
           </footer>
         </div>
-      ) : (
+      )}
+      
+      {!activeChallenge && isActive && (
         <div className={styles.challengeNotActive}>
-          <strong>Finalize um ciclo para receber um desafio</strong>
+          <strong>Atente-se ao tempo restante para o novo desafio</strong>
           <p>
             <img src="icons/level-up.svg" alt="Level Up"/>
-            Avance de level completando desafios.
+            Caso complete o desafio, ganhará experiência para avançar de level.
+          </p>
+        </div>
+      )}
+      
+      {!activeChallenge && !isActive && (
+        <div className={styles.challengeNotActive}>
+          <strong>Inicie um ciclo para receber desafios ao final da contagem regressiva</strong>
+          <p>
+            <img src="icons/level-up.svg" alt="Level Up"/>
+            Avance de level ganhando experiência completando estes desafios.
           </p>
         </div>
       )}

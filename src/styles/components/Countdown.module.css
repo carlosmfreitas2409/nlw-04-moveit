@@ -57,6 +57,8 @@
   font-size: 1.25rem;
   font-weight: 600;
 
+  position: relative;
+
   transition: background-color 0.2s;
 }
 
@@ -73,13 +75,40 @@
   color: var(--title);
 }
 
+.countdownButtonActive::after {
+  content: '';
+  position: absolute;
+
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  border-radius: 0 0 5px 5px;
+  background-color: var(--gray-line);
+}
+
 .countdownButtonActive:not(:disabled):hover {
   background: var(--red);
   color: var(--white);
 }
 
 .countdownButtonActive:not(:disabled):hover svg {
-  color: #ffffff !important;
+  color: var(--white) !important;
+}
+
+.countdownButtonActive div {
+  position: absolute;
+  z-index: 1;
+  
+  height: 5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  
+  border-radius: 0 0 0 5px;
+  background-color: var(--green);
+  transition: width 1s linear;
 }
 
 .countdownButton:disabled {

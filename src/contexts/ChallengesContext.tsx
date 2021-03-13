@@ -3,6 +3,8 @@ import Cookies from 'js-cookie';
 
 import challenges from '../../challenges.json';
 import { LevelUpModal } from '../components/LevelUpModal';
+import axios from 'axios';
+import { log } from 'node:console';
 
 interface Challenge {
   type: 'body' | 'eye';
@@ -25,6 +27,7 @@ interface ChallengesContextData {
 
 interface ChallengesProviderProps {
   children: ReactNode;
+  email: string;
   level: number;
   currentExperience: number;
   challengesCompleted: number;
@@ -36,9 +39,9 @@ export function ChallengesProvider({
   children,
   ...rest
 }: ChallengesProviderProps) {
-  const [level, setLevel] = useState(rest.level ?? 1);
-  const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
-  const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
+  const [level, setLevel] = useState(rest.level);
+  const [currentExperience, setCurrentExperience] = useState(rest.currentExperience);
+  const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted);
 
   const [activeChallenge, setActiveChallenge] = useState(null);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
@@ -48,13 +51,7 @@ export function ChallengesProvider({
   useEffect(() => {
     Notification.requestPermission();
   }, []);
-
-  useEffect(() => {
-    Cookies.set('level', String(level));
-    Cookies.set('currentExperience', String(currentExperience));
-    Cookies.set('challengesCompleted', String(challengesCompleted));
-  }, [level, currentExperience, challengesCompleted]);
-
+  
   function levelUp() {
     setLevel(level + 1);
     setIsLevelUpModalOpen(true);
@@ -85,9 +82,7 @@ export function ChallengesProvider({
   }
 
   function completeChallenge() {
-    if(!activeChallenge) {
-      return ;
-    }
+    if(!activeChallenge) return;
 
     const { amount } = activeChallenge;
 
@@ -102,6 +97,17 @@ export function ChallengesProvider({
     setActiveChallenge(null);
     setChallengesCompleted(challengesCompleted + 1);
   }
+
+  useEffect(() => {
+    const { email } = rest;
+
+    axios.put('/api/challenges', {
+      email,
+      level,
+      currentExperience,
+      challengesCompleted,
+    }).catch(err => console.error(err));
+  }, [level, currentExperience, challengesCompleted, rest]);
 
   return (
     <ChallengesContext.Provider value={{ 
