@@ -78,13 +78,13 @@ Nos links abaixo você encontra o layout do projeto Web. Lembrando que você pre
 
 - [x] ~~Melhoria no layout~~
 - [x] ~~Autenticação com Github e Google~~
-- [x] ~~Salvar no banco de dados (Remover cookies)~~
+- [x] ~~Armazenar dados no banco de dados~~
 - [x] ~~Animação na ExperienceBar~~
 - [x] ~~Animação no botão, quando estiver ativo~~
 - [ ] Dark Mode
 - [ ] Twitter share
 - [ ] Responsividade
-- [ ] Leaderboard
+- [ ] Página de Leaderboard
 - [ ] Animações (Framer Motion)
 
 ## :information_source: Instalação e uso
