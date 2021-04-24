@@ -28,7 +28,7 @@ export default async (
 
     const query = {
       name: 'update-user',
-      text: 'UPDATE users SET level=$1, current_experience=$2, challenges_completed=$3 WHERE email=$4',
+      text: 'UPDATE user__users SET level=$1, current_experience=$2, challenges_completed=$3 WHERE email=$4',
       values: [level, currentExperience, challengesCompleted, email]
     }
 
@@ -49,14 +49,14 @@ export default async (
     let pgResponse: QueryResultRow[] | Error;
 
     if(request.query.users === 'all') {
-      const queryResponse = await client.query('SELECT * FROM users ORDER BY level');
+      const queryResponse = await client.query('SELECT * FROM user__users ORDER BY level');
       pgResponse = queryResponse.rows;
     } else if(request.query.users) {
       const { users: email } = request.query as { users: string };
   
       const query = {
         name: 'fetch-user',
-        text: 'SELECT * FROM users WHERE email = $1',
+        text: 'SELECT * FROM user__users WHERE email = $1',
         values: [email]
       };
 
